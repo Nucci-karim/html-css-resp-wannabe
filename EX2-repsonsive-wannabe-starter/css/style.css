@@ -47,7 +47,7 @@ img {
 
 /* LAYOUT */
 .container {
-    width: 100%;
+    width: 1140px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -128,26 +128,19 @@ img {
     SOLUZIONE RESPONSIVE
  ************************************************/
 
- @media screen and (min-width: 768px) { 
-    
+ @media screen and (max-width: 768px) { 
+    .container{
+        width: 100%;
+    }
  }
 
  @media screen and (max-width: 480px) { 
-    .container{
-        display: flex;
+    
+    .row {
         flex-wrap: wrap;
     }
 
-    .basis-50{
-        display: flex;
-        flex-basis: calc(100% /2);
-        flex-wrap: wrap;
+    .lessons .col, .steps .col, .why-us .col{
+        width: 100%;
     }
-
-    .basis-33{
-        display: flex;
-        flex-basis: calc(100% /3);
-        flex-wrap: wrap;
-    }
-
  }
